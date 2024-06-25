@@ -1,0 +1,28 @@
+﻿<Window x:Class="shop.Pages.AddProduct"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:shop.Pages"
+        mc:Ignorable="d"
+        Height="450" Width="250"
+        xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes" xmlns:col="clr-namespace:System.Collections;assembly=mscorlib" WindowStartupLocation="CenterScreen" WindowStyle="ToolWindow" ResizeMode="NoResize">
+    <Grid>
+        <StackPanel>
+
+            <Label Content="Добавить" HorizontalAlignment="Center" FontSize="15"/>
+            <TextBox x:Name="boxname" materialDesign:HintAssist.Hint="Название" Style="{StaticResource MaterialDesignFloatingHintTextBox}"  FontSize="14"/>
+            <TextBox x:Name="boxw" materialDesign:HintAssist.Hint="Вес" Style="{StaticResource MaterialDesignFloatingHintTextBox}"  FontSize="14"/>
+            <TextBox x:Name="boxpricepur" materialDesign:HintAssist.Hint="Цена закупки" Style="{StaticResource MaterialDesignFloatingHintTextBox}"  FontSize="14"/>
+            <TextBox x:Name="boxprice" materialDesign:HintAssist.Hint="Цена продажи" Style="{StaticResource MaterialDesignFloatingHintTextBox}"  FontSize="14"/>
+            <TextBox x:Name="boxq" materialDesign:HintAssist.Hint="Количество" Style="{StaticResource MaterialDesignFloatingHintTextBox}"  FontSize="14"/>
+            <ComboBox x:Name="boxsuppliers" materialDesign:HintAssist.Hint="Поставщик" materialDesign:TextFieldAssist.UnderlineBrush="{DynamicResource SecondaryHueMidBrush}" Style="{StaticResource MaterialDesignFloatingHintComboBox}"/>
+            <ComboBox x:Name="boxtype" materialDesign:HintAssist.Hint="Тип" materialDesign:TextFieldAssist.UnderlineBrush="{DynamicResource SecondaryHueMidBrush}" Style="{StaticResource MaterialDesignFloatingHintComboBox}"/>
+            <StackPanel Orientation="Horizontal">
+                <TextBox x:Name="boxpik" IsEnabled="False" materialDesign:HintAssist.Hint="Картинка" Style="{StaticResource MaterialDesignFloatingHintTextBox}"  FontSize="14" Width="150"/>
+                <Button Content="Выбрать" VerticalAlignment="Bottom" Click="Button_Click"/>
+            </StackPanel>
+            <Button Content="Добавить" HorizontalAlignment="Center" VerticalAlignment="Top" Click="Add_Button" Margin="10" />
+        </StackPanel>
+    </Grid>
+</Window>
